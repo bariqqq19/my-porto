@@ -1,0 +1,748 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* -- Pengaturan Global -- */
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #152A38; /* Warna latar belakang utama */
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  /* Tautan tanpa garis bawah */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* -- Header & Navigasi -- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 7% 10px 7%;
+    margin: 20px 100px 10px 100px;
+    background-color: #152A38;
+  }
+  
+  .navKiri {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navKiri img {
+    width: 40px;
+    margin-right: 10px;
+    /* border-style: solid; */
+  }
+  
+  .navKiri h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .nav-li ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-li ul li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-li ul li a:hover {
+    color: #f3c300; /* Warna highlight saat hover */
+  }
+  
+  /* -- Bagian Main / Konten -- */
+  main {
+    width: 100%;
+  }
+  
+  /* --- Section Home (Hero) --- */
+  .section-home {
+    /* border-style: solid; */
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 70px 50px;
+    background-color:#152A38; /* Bisa disamakan dengan header atau dibedakan */
+  }
+  
+  .desc-home {
+    flex: 1 1 300px;
+    max-width: 60%;
+    max-height: 700px;
+    margin-bottom: 20px;
+    /* border-style: solid; */
+    align-content: center;
+    padding: 9% 0 9% 9%;
+  }
+  
+  .desc-home h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    font-weight: 900;
+  }
+  
+  .desc-home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 900;
+  }
+  
+  .desc-home p {
+    margin-bottom: 20px;
+    margin-right: 200px;
+    padding: 10px 0;
+    line-height: 1.5;
+    /* border-style: solid;   */
+    color: #D1D1D1;
+  }
+
+  .desc-home span {
+    color: #71DFEF;
+  }
+  
+  .img-home {
+    flex: 1 1;
+    text-align: center;
+    /* border-style: solid; */
+    max-width: 40%;
+    height: 750px;
+    margin-top: 15%;
+    object-fit: cover;
+  }
+  
+  .img-home img {
+    max-width: 600px;
+    width: 100%;
+    height: 750px; 
+    object-fit: cover;
+    object-position: top;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 1) 100%);
+  }
+  
+  .section-home button {
+    background-color:  #71DFEF;
+    color: #0f3d47;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .section-home button:hover {
+    background-color: #ffffff;
+    color: #71DFEF;
+  }
+  
+  .section-home button a {
+    color: #0f3d47;
+  }
+  
+  /* --- Section About --- */
+  .section-about {
+    padding: 50px 5%;
+    text-align: center;
+    /* border-style: solid; */
+    max-height: 1000px;
+  }
+  
+  .section-about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .section-about .about-content {
+    /* border-style: solid; */
+    display: flex ;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-around;
+    height: 800px;
+  }
+  
+  .section-about .img-about {
+    /* border-style: solid; */
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+  }
+  
+  .section-about .img-about img {
+    width: 80%;
+    height: 65%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 100%;
+    /* object-fit: cover; */
+    border-style: solid;
+  }
+  
+  .section-about .about-desc {
+    font-size: 1.5rem;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 30px 56px 30px 30px;
+    line-height: 1.5;
+    /* border-style: solid; */
+    text-align: justify;
+  }
+  
+  /* --- Section Skills --- */
+  .section-skills {
+    padding: 50px 5%;
+    text-align: center;
+    /* border-style: solid; */
+    height: fit-content;
+  }
+  
+  .section-skills h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .skills-container {
+    flex-direction: row;
+    /* border-style: solid; */
+    margin-top: 20px;
+    height: 90%;
+    justify-items: center; 
+  }
+  
+  .skill-box {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 20px 50px 0px 0px;
+    margin: 30px;
+    border-radius: 10px;
+    text-align: left;
+    flex-direction:  row;
+    flex: 1 1;
+    border-style: solid;
+    width: 70%;
+    height: 300px;
+
+  }
+  
+  .skill-box .skill-img{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* border-style: solid black; */
+    border-radius: 0;
+    justify-items: center;
+  }
+
+  .skill-box img {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 0px;
+    padding: 10px 20px 0px 5px;
+    /* border-style: solid black; */
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill-box .skill-img span{
+    justify-content: center;
+    /* border-style: solid; */
+    margin-top: 0;
+  }
+
+  .skill-box .skill-desc {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .skill-box .skill-desc p {
+    font-size: 1rem;
+    line-height: 1.4;
+    /* border-style: solid; */
+    height: 100%;
+    padding: 10px 0;
+    text-align: justify;
+  }
+  
+  /* --- Section Why Hire Me --- */
+  .section-why {
+    padding: 50px 5%;
+    text-align: center;
+  }
+  
+  .section-why h1 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .why-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    /* border-style: solid; */
+    height: 350px;
+    padding-top: 20px;
+  }
+  
+  .why-box {
+    background-color:transparent;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+  }
+  
+  .why-box img {
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+  }
+  
+  .why-box p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* --- Section Testimoni --- */
+  .section-testi {
+    padding: 50px 5%;
+    text-align: center;
+  }
+  
+  .section-testi h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .testi-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .testi-box {
+    background-color:#2A5B74;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .testi-box p {
+    margin-bottom: 10px;
+  }
+  
+  /* --- Section Portfolio (Our Experiences) --- */
+  .section-project {
+    padding: 50px 5%;
+    text-align: center;
+  }
+  
+  .section-project h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+    border-style: solid;
+    height: 350px;
+    border-radius: 10px;
+  }
+  
+  .project-item img {
+    margin: 75px 30px;
+    width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* --- Section Contact --- */
+  .section-contact {
+    padding: 50px 5%;
+    text-align: center;
+  }
+  
+  .section-contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .section-contact form {
+    max-width: 600px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+  }
+  
+  .section-contact form label {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .section-contact form input,
+  .section-contact form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .section-contact form button {
+    padding: 10px 20px;
+    background-color:#2A5B74;
+    border: none;
+    color: #0f3d47;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: white;
+  }
+  
+  .section-contact form button:hover {
+    background-color: #ffffff;
+    color: #0f3d47 ;
+  }
+  
+  /* --- Footer --- */
+  .footer {
+    background-color: #2A5B74;
+    color: #fff;
+    padding: 40px 20px;
+    position: relative;
+}
+
+/* Kontainer utama untuk kolom */
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    gap: 30px;
+}
+
+/* Kolom masing-masing */
+/* Menambahkan garis vertikal antara kolom di footer */
+.footer .column {
+    width: 23%;
+    text-align: left;
+    padding-right: 20px; /* Memberikan sedikit jarak pada kolom kanan */
+    padding-left: 20px;  /* Memberikan sedikit jarak pada kolom kiri */
+    position: relative;  /* Agar bisa mengatur posisi elemen dengan tepat */
+}
+
+/* Garis vertikal pemisah antar kolom */
+.footer .column:not(:last-child) {
+    border-right: 1px solid white /* Garis pemisah vertikal */
+}
+
+
+/* Logo dan Ikon Sosial */
+.logo-column .logo-social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-column .logo-social img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+.logo-column .social-icons a {
+    margin-right: 15px;
+    color: #fff;
+    font-size: 50px; /* Ukuran ikon lebih besar */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo-column .social-icons a:hover {
+    color: #333; /* Efek hover */
+    transform: scale(1.2); /* Membesar saat hover */
+}
+
+/* Teks deskripsi di bawah logo */
+.logo-column p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Judul kolom */
+.footer .column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.contact-table {
+    width: 100%; /* Buat tabel mengisi lebar kolom */
+    border-collapse: collapse; /* Hilangkan celah antar sel tabel */
+}
+
+.contact-table th,
+.contact-table td {
+    vertical-align: top; /* Ikon sejajar di bagian atas teks */
+    padding: 5px 10px; /* Tambahkan jarak dalam sel */
+    text-align: left; /* Pastikan teks rata kiri */
+}
+
+.contact-table th {
+    width: 40px; /* Lebar kolom untuk ikon */
+    text-align: center; /* Ikon rata tengah */
+}
+
+.contact-table i {
+    font-size: 18px; /* Ukuran ikon */
+    color: white; /* Warna ikon */
+    padding: 8px;
+    border-radius: 50%; /* Ikon berbentuk lingkaran */
+}
+
+.contact-table td p {
+    margin: 0; /* Hilangkan margin default dari paragraf */
+    color: #fff; /* Warna teks */
+    line-height: 1.5; /* Jarak antar baris teks */
+}
+
+/* Teks dan tautan dalam kolom */
+.footer .column p,
+.footer .column a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+/* Ikon pada bagian alamat, telepon, dan email */
+.footer .column p i {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Garis Horizontal */
+.footer-line {
+    border-top: 1px solid white;
+    margin: 30px 0;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.menu-icon {
+  display: none; /* Default: disembunyikan di layar besar */
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsiveness for screens up to 440px */
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.navKiri {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.nav-li {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #0d2538;
+    text-align: center;
+}
+
+.nav-li ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.nav-li.active {
+    display: block;
+}
+
+  .section-home {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .desc-home {
+    max-width: 100%;
+    padding: 5%;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .desc-home h1 {
+    font-size: 1.4rem;
+  }
+
+  .desc-home h2{
+    font-size: 1rem;
+  }
+
+  .desc-home p {
+    margin-right: 0;
+    font-size: 0.7rem;
+    margin-bottom: 0px;
+  }
+
+  .desc-home button {
+    height: 30px;
+    font-size: 0.7rem;
+    margin-top: 9px;
+  }
+
+  .img-home {
+    max-width: 100%;
+    height: auto;
+    width: 70%;
+    margin-top: 10%;
+    order: -1;
+    margin-left: 15%;
+    /* border-style: solid; */
+  }
+
+  .img-home img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section-about .about-content {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .section-about .img-about {
+    max-width: 100%;
+    max-height: 100%;
+    width: 50%;
+    height: 50%;
+  }
+
+  .section-about .about-desc {
+    max-width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-box {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .skill-box img {
+    width: 100%;
+    height: 100%;
+    margin-left: 100%;
+  }
+
+.skill-box span{
+  margin-left: 430%;
+}
+
+  .skill-box p{
+    width: 200%;
+  }
+
+  .section-why .why-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .why-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-gallery {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .project-item img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .section-contact form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .column {
+    width: 100%;
+    border-right: none;
+    padding: 10px 0;
+  }
+}
