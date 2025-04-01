@@ -10,8 +10,10 @@
 <body>
     <header>
         <div class="navKiri">
-            <div class="menu-icon">
-                <i class="fas fa-bars"></i> <!-- Icon hamburger -->
+            <div class="hamburger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
             </div>
             <img src="asset/logoPweb.webp" alt="">
             <h1>Buroq Dev</h1>
@@ -21,14 +23,16 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <script src="script.js"></script>
+
     <main>
-        <section  class="section-home">
+        <section id="home" class="section-home">
             <div class="desc-home">
                 <h2><span>Hello, it's Me</span></h2>
                 <h1>DAFFA BARIQ SUWANDI</h1>
@@ -41,7 +45,7 @@
             </div>
         </section>
 
-        <section class="section-about">
+        <section id="about" class="section-about">
             <h1>About Me</h1>
             <div class="about-content">
                 <div class="img-about">
@@ -54,7 +58,7 @@
             </div>
         </section>
 
-        <section class="section-skills">
+        <section id="skills" class="section-skills">
             <h1>Skills</h1>
             <div class="skills-container">
                 <div class="skill-box">
@@ -96,7 +100,7 @@
             </div>
         </section>
 
-        <section class="section-why">
+        <section id="why" class="section-why">
             <h1>Why Hire Me?</h1>
             <div class="why-container">
                 <div class="why-box">
@@ -114,7 +118,7 @@
             </div>
         </section>
 
-        <section class="section-testi">
+        <section id="testimoni" class="section-testi">
             <h1>Testimoni Client</h1>
             <div class="testi-container">
                 <div class="testi-box">
@@ -132,7 +136,7 @@
             </div>
         </section>
 
-        <section class="section-project">
+        <section id="portofolio" class="section-project">
             <h1>Our Experiences</h1>
             <div class="project-gallery">
                 <div class="project-item"><img src="asset/tien1.png" alt="Project 1"></div>
@@ -141,7 +145,7 @@
             </div>
         </section>
 
-        <section class="section-contact">
+        <section id="contact" class="section-contact">
             <h1>Contact Form</h1>
             <form>
                 <label for="name">Nama:</label>
