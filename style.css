@@ -574,46 +574,107 @@
 
 /* Responsiveness for screens up to 440px */
 @media screen and (max-width: 768px) {
-  header {
+ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    margin: 0 20px; /* mengurangi margin agar lebih pas di layar kecil */
     position: relative;
-}
+  }
 
-.navKiri {
+  /* Bagian kiri header: hamburger, logo, dan teks */
+  .navKiri {
     display: flex;
     align-items: center;
     gap: 10px;
-}
+  }
 
-.menu-icon {
+  .navKiri img, .navKiri h1  {
+    display: none;
+  }
+
+  /* Hamburger menu menggunakan kode HTML dengan tiga bar */
+  .hamburger {
     display: block;
     cursor: pointer;
-    font-size: 24px;
-}
+    z-index: 1000;
+    position: fixed;
+    margin-top: 25px;
+  }
 
-.nav-li {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  /* Menu navigasi: tersembunyi secara default dan muncul dengan animasi slide-in dari kiri */
+  .nav-li {
+    position: fixed;
+    top: 0;
+    left: -250px;  /* tersembunyi di luar layar */
+    width: 250px;
+    height: 100%;
     background-color: #0d2538;
-    text-align: center;
-}
+    transform: translateX(-100%); /* geser keluar dari layar */
+    transition: transform 0.3s ease-in-out;
+    padding-top: 60px; /* beri ruang agar tidak bertabrakan dengan header */
+    z-index: 999;
+  }
 
-.nav-li ul {
+  .nav-li ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px 0;
-}
+  }
 
-.nav-li.active {
+  .nav-li ul li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+  .nav-li ul li a:hover {
+    color: #f3c300;
+  }
+
+  /* Ketika aktif, navigasi muncul dari kiri */
+  .nav-li.active {
+    left: 0;
     display: block;
-}
+    text-align: right;
+    padding-right: 30px;
+    width: 40%;
+    text-transform: uppercase;
+    transform: translateX(0);
+  }
+
+    /* Contoh animasi sederhana untuk hamburger */
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  /* Jika diperlukan, tambahkan animasi perubahan bentuk ketika aktif */
+  .hamburger.active .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .hamburger.active .bar2 {
+    opacity: 0;
+  }
+  .hamburger.active .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 
   .section-home {
     flex-direction: column;
@@ -741,8 +802,6 @@
   }
 
   .footer .column {
-    width: 100%;
-    border-right: none;
-    padding: 10px 0;
+    display: none;
   }
 }
